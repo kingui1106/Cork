@@ -1,4 +1,4 @@
-
+﻿
 // +-------------------------------------------------------------------------
 // | Mesh.cpp
 // | 
@@ -663,38 +663,35 @@ namespace Cork
 
 		std::mutex			vectorLock;
 
-		ThreadPool::getPool().parallel_for(4, (size_t)0, m_tris.size(), [&](size_t blockBegin, size_t blockEnd)
+		size_t blockBegin = 0;
+		size_t blockEnd = m_tris.size();	
+		size_t		ufid;
+		for (size_t i = blockBegin; i < blockEnd; i++)
 		{
-			size_t		ufid;
+			ufid = uf.find(i);
 
-			for (size_t i = blockBegin; i < blockEnd; i++)
+			retry :
+
+			if (uq_ids[ufid] == long(-1))
 			{
-				ufid = uf.find(i);
+				std::lock_guard<std::mutex>		lock(vectorLock);
 
-				retry :
+				if (uq_ids[ufid] != long(-1))
+					goto retry;
 
-				if (uq_ids[ufid] == long(-1))
-				{
-					std::lock_guard<std::mutex>		lock(vectorLock);
-
-					if (uq_ids[ufid] != long(-1))
-						goto retry;
-
-					size_t N = components->size();
-					components->emplace_back();
+				size_t N = components->size();
+				components->emplace_back();
 //					(*components)[N].reserve(512);
 
-					uq_ids[ufid] = uq_ids[i] = (long)N;
-					(*components)[N].push_back(i);
-				}
-				else
-				{
-					uq_ids[i] = uq_ids[ufid];
-					(*components)[uq_ids[i]].push_back(i);
-				}
+				uq_ids[ufid] = uq_ids[i] = (long)N;
+				(*components)[N].push_back(i);
 			}
-		});
-
+			else
+			{
+				uq_ids[i] = uq_ids[ufid];
+				(*components)[uq_ids[i]].push_back(i);
+			}
+		}
 		return( components );
 	}
 

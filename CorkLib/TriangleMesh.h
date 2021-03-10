@@ -1,4 +1,4 @@
-// +-------------------------------------------------------------------------
+﻿// +-------------------------------------------------------------------------
 // | TriangleMesh.h
 // | 
 // | Author: Gilbert Bernstein
@@ -113,7 +113,7 @@ namespace Cork
 	typedef SEFUtility::ResultWithUniqueReturnPtr<TriangleMeshBuilderResultCodes, TriangleMesh>		TriangleMeshBuilderResult;
 
 
-	class IncrementalVertexIndexTriangleMeshBuilder
+	class CORKLIB_API IncrementalVertexIndexTriangleMeshBuilder
 	{
 	public:
 

@@ -46,7 +46,7 @@
     <ProjectGuid>{6BFC4809-FF4F-4801-8202-1D82BD3F31AC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>CorkLib</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -230,7 +230,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>TRILIBRARY;_CRT_SECURE_NO_WARNINGS;CPU86;TRIANGLE_INTEL64;NO_TIMER;_USE_MATH_DEFINES;NOMINMAX;CORKLIB_EXPORTS;BOOST_SYSTEM_DYN_LINK</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>$(TBB_PATH)\include;$(BOOST_PATH);$(MPIR_PATH)\build.vc14\lib_mpir_gc\x64\Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dep\tbb2017_20170807oss\include;D:\code\SmartGeoLogical\Tools\GLAL\3rdlib\boost\win\include;D:\code\SmartGeoLogical\Tools\GLAL\3rdlib\mpir\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
@@ -244,7 +244,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(TBB_PATH)\lib\intel64\vc12;$(MPIR_PATH)\build.vc14\lib_mpir_gc\x64\Debug;$(BOOST_PATH)\lib64-msvc-14.1;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\dep\tbb2017_20170807oss\lib\intel64\vc14;D:\code\SmartGeoLogical\Tools\GLAL\3rdlib\mpir\lib;D:\code\SmartGeoLogical\Tools\GLAL\3rdlib\boost\win\libx64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>mpir.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>LIBCMTD;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <LargeAddressAware>true</LargeAddressAware>
@@ -405,7 +405,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>TRILIBRARY;CPU86;TRIANGLE_INTEL64;_CRT_SECURE_NO_WARNINGS;NO_TIMER;_USE_MATH_DEFINES;NOMINMAX;CORKLIB_EXPORTS;BOOST_SYSTEM_DYN_LINK</PreprocessorDefinitions>
       <SDLCheck>false</SDLCheck>
-      <AdditionalIncludeDirectories>$(TBB_PATH)\include;$(BOOST_PATH);$(MPIR_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\dep\tbb2017_20170807oss\include;D:\code\SmartGeoLogical\Tools\GLAL\3rdlib\boost\win\include;D:\code\SmartGeoLogical\Tools\GLAL\3rdlib\mpir\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
       <FloatingPointModel>Strict</FloatingPointModel>
@@ -422,7 +422,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(TBB_PATH)\lib\intel64\vc14;$(BOOST_PATH)\lib64-msvc-14.1;$(MPIR_PATH)\build.vc14\dll_mpir_gc\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\dep\tbb2017_20170807oss\lib\intel64\vc14;D:\code\SmartGeoLogical\Tools\GLAL\3rdlib\boost\win\libx64\Release;D:\code\SmartGeoLogical\Tools\GLAL\3rdlib\mpir\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>mpir.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <Profile>true</Profile>

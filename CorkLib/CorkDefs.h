@@ -1,4 +1,4 @@
-// +-------------------------------------------------------------------------
+﻿// +-------------------------------------------------------------------------
 // | CorkDefs.h
 // | 
 // | Author: Stephan Friedl
@@ -30,10 +30,10 @@
 // NOTE: none of these values should be modified by the clients
 
 const int QUANTIZATION_BITS = 30;							//	number of bits to set resolution of quantizing grid snapped to model
-const int PERTURBATION_BUFFER_BITS = 8;						//	minimum number of bits of resolution that we will reserve when perturbing the model
+const int PERTURBATION_BUFFER_BITS = 0;						//	minimum number of bits of resolution that we will reserve when perturbing the model
 															//		8 bits means that we will not perturb the mesh more than 1/128th of the length of the smallest edge in the model
 const int PERTURBATION_RANGE_BITS = 5;						//	number of bits we will perturb over
-const int MINIMUM_PERTURBATION_RANGE_BITS = 2;				//	initially perturbation range will be 2^2 or 4
+const int MINIMUM_PERTURBATION_RANGE_BITS = 0;				//	initially perturbation range will be 2^2 or 4
 
 //	If this is a 32 bit build, limit the number of points in the disjoint union to one million.  Beyond that and we run out of memory.
 //		For 64 bit builds, go up to 5 million.

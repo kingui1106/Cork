@@ -1,4 +1,4 @@
-// +-------------------------------------------------------------------------
+﻿// +-------------------------------------------------------------------------
 // | quantization.h
 // | 
 // | Author: Gilbert Bernstein
@@ -129,7 +129,7 @@ namespace Cork
 
 				if (quantaBitsPerMinEdge < 10 )
 				{
-					std::cout << "Insufficient number of quanta bits for min edge length" << std::endl;
+					//std::cout << "Insufficient number of quanta bits for min edge length" << std::endl;
 				}
 
 				m_bitsOfPurturbationRange = abs(quantaBitsPerMinEdge);
